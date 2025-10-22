@@ -30,7 +30,6 @@ src/
 └── test/ # Unit tests (if applicable)
 
 yaml
-Копировать код
 
 ---
 
@@ -54,7 +53,6 @@ All clients connect to the WebSocket endpoint:
 /ws
 
 markdown
-Копировать код
 
 ### Message Flow
 1. **Client** sends a message to `/app/chat`
@@ -66,7 +64,6 @@ The message is saved via ChatMessageService
 Then it’s forwarded to the recipient’s queue:
 
 bash
-Копировать код
 /user/{recipientId}/queue/messages
 The recipient’s WebSocket listener receives the message in real-time.
 
@@ -76,7 +73,6 @@ GET	/messages/{senderId}/{recipientId}	Get chat history between two users
 
 🧩 Example Configuration (WebSocket)
 java
-Копировать код
 @Override
 public void configureMessageBroker(MessageBrokerRegistry registry) {
     registry.enableSimpleBroker("/user");
@@ -108,7 +104,6 @@ Maven 3.8+
 
 Steps
 bash
-Копировать код
 # Clone the repository
 git clone https://github.com/<your-username>/one-to-one-chat.git
 
